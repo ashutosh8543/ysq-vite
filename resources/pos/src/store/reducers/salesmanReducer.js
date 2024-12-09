@@ -1,0 +1,20 @@
+import {userActionType} from '../../constants';
+
+export default (state = [], action) => {
+    switch (action.type) {
+        case userActionType.FETCH_SALESMANS:
+           return action.payload;
+        case userActionType.FETCH_ALL_SALESMANS:
+            return action.payload;
+        case userActionType.FETCH_SALESMAN:
+            return [action.payload]
+        case userActionType.ADD_SALESMAN:
+            return action.payload;
+        case userActionType.EDIT_SALESMAN:
+            return state.map(item => item.id === +action.payload.id ? action.payload : item);
+        case userActionType.DELETE_USER:
+            return state.filter(item => item.id !== action.payload);
+        default:
+            return state;
+    }
+};
