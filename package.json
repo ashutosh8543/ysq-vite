@@ -1,15 +1,9 @@
 {
     "private": true,
     "scripts": {
-        "dev": "npm run development",
-        "development": "mix",
-        "watch": "mix watch",
-        "watch-poll": "mix watch -- --watch-options-poll=1000",
-        "hot": "mix watch --hot",
-        "prod": "npm run production",
-        "production": "mix --production",
         "rtl": "webpack --config webpack-rtl.config.js",
-        "build": "react-scripts --max_old_space_size=4096 build"
+        "build": "vite build",
+        "dev": "vite"
     },
     "devDependencies": {
         "@pmmmwh/react-refresh-webpack-plugin": "^0.5.0-rc.0",
